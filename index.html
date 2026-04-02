@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Professional Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',sans-serif;background:#0f172a;color:#e2e8f0}
+
+    header{padding:60px 20px;text-align:center;background:linear-gradient(135deg,#1e293b,#020617)}
+
+    .hero{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:15px;
+    }
+
+   .hero img{
+  width:140px;
+  height:140px;
+  border-radius:10px; /* or 0 for perfect square */
+  border:3px solid #38bdf8;
+  object-fit:cover;
+}
+
+    .typing{color:#38bdf8;font-weight:500}
+
+    nav{margin-top:20px}
+    nav a{margin:0 10px;color:#38bdf8;text-decoration:none}
+
+    .btn{
+      display:inline-block;margin:10px;padding:10px 20px;
+      background:#38bdf8;color:#0f172a;border-radius:8px;text-decoration:none;font-weight:600
+    }
+
+    section{max-width:1000px;margin:40px auto;padding:0 20px}
+    h2{color:#38bdf8;margin-bottom:20px}
+
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px
+    }
+
+    .card{
+      background:#1e293b;padding:20px;border-radius:15px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.3);
+      transition:.3s
+    }
+
+    .card:hover{transform:translateY(-5px)}
+
+    footer{text-align:center;padding:20px;background:#020617;opacity:.7}
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="hero">
+    <img src="Profile.jpg" alt="Profile Photo">
+    <h1>Shishirakanta Padhan</h1>
+    <p class="typing" id="typing"></p>
+
+    <div>
+      <a href="Shishirakanta.pdf" class="btn" download>Download CV</a>
+      <a href="https://www.linkedin.com/in/shishirakanta-padhan-872769277/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BwXIGO4bkSd2yf4OpJ3lgoQ%3D%3D" class="btn" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section id="about">
+  <h2>Profile Summary</h2>
+  <p>Dedicated and detail-oriented Library and Information Science graduate with hands-on experience in academic library environments, including the Central Library at NISER and as a Library Trainee at IIT Hyderabad. Proficient in library management systems such as Koha and DSpace, with strong expertise in information organisation, cataloguing, and user services. Skilled in supporting digital library initiatives and enhancing access to information resources through user-centric approaches. Demonstrates adaptability, strong communication skills, and the ability to quickly integrate into new library systems and teams. Committed to contributing effectively to organisational growth by delivering efficient and innovative library services.</p>
+</section>
+
+<section id="skills">
+  <h2>Core Competencies</h2>
+  <div class="grid">
+    <div class="card">Koha (Library Automation)</div>
+    <div class="card">DSpace (Institutional Repository)</div>
+    <div class="card">Cataloguing (AACR2/RDA)</div>
+    <div class="card">Classification (DDC)</div>
+    <div class="card">Reference Services</div>
+    <div class="card">Digital Library Management</div>
+  </div>
+</section>
+
+<section id="experience">
+  <h2>Professional Experience</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Library Trainee – IIT Hyderabad</h3>
+      <p>Worked with digital repositories, user services, and automation tools to improve access to academic resources.</p>
+    </div>
+    <div class="card">
+      <h3>Library Intern – NISER</h3>
+      <p>Handled cataloguing, classification, and supported users in accessing scholarly materials.</p>
+    </div>
+  </div>
+</section>
+
+<section id="research">
+  <h2>Research & Publications</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Research Work Title</h3>
+      <p>Submitted dissertation titled "TRENDS IN INTERNATIONAL LIS RESEARCH: A CONTENT ANALYSIS (2014-2023)".</p>
+    </div>
+    <div class="card">
+      <h3>Conference / Seminar</h3>
+      <p>Presented paper on (topic) at (conference name, year).</p>
+    </div>
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>Certifications & Achievements</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>University Gold Medalist</h3>
+      <h3>UGC-JRF Qualified</h3>
+      <p>Qualified UGC-NET JRF (Dec 2025).</p>
+    </div>
+    <div class="card">
+      <h3>Internship Certificate - NISER</h3>
+      <p>Completed internship at Central Library, NISER. </p>
+    </div>
+    <div class="card">
+      <h3>Library Trainee - IIT Hyderabad</h3>
+      <p>Professional training in academic library systems and services.</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: shishirakantapadhan@email.com</p>
+  <p>Phone: +91 7325964756</p>
+</section>
+
+<footer>
+  <p>© 2026 Shishirakanta Padhan | Academic Portfolio</p>
+</footer>
+
+<script>
+  const roles = [
+    "Library Professional",
+    "Koha & DSpace Specialist",
+    "Aspiring Academic Librarian",
+    "Information Science Graduate"
+  ];
+
+  let i=0,j=0,current="",isDeleting=false;
+  const typing=document.getElementById("typing");
+
+  function type(){
+    current=roles[i];
+
+    if(isDeleting){
+      typing.textContent=current.substring(0,j--);
+    }else{
+      typing.textContent=current.substring(0,j++);
+    }
+
+    if(!isDeleting && j===current.length+1){
+      isDeleting=true;
+      setTimeout(type,1000);
+      return;
+    }
+
+    if(isDeleting && j===0){
+      isDeleting=false;
+      i=(i+1)%roles.length;
+    }
+
+    setTimeout(type,isDeleting?50:100);
+  }
+
+  type();
+</script>
+
+</body>
+</html>
